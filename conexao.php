@@ -1,7 +1,8 @@
 <?php
 
-$dataBsePath = __DIR__ . '/banco.sqlite';
-$pdo = new PDO('sqlite:' . $dataBsePath);
+use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
+
+$pdo = ConnectionCreator::createConnection();
 
 echo 'Conectei';
 
